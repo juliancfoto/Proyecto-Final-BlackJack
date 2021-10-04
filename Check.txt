@@ -1,0 +1,43 @@
+package proyectoFinal;
+
+import java.util.Arrays;
+import java.util.Collections;
+
+public class Check {
+
+	RandomCart cards[] = new RandomCart[52];
+	int posicion = 0;
+
+	public void crear() {
+		String symbols = "23456789TJQKA";
+		String tipo = "PTDC";
+		int index = 0;
+
+		for (int i = 0; i < tipo.length(); i++) {
+			for (int j = 0; j < symbols.length(); j++) {
+
+				RandomCart temp = new RandomCart();
+				temp.setValor(symbols.charAt(i));
+				temp.setTipo(tipo.charAt(i));
+				this.cards[index] = temp;
+				index++;
+			}
+		}
+		shuffleCards();
+	}
+
+	private void shuffleCards() {
+
+		Collections.shuffle(Arrays.asList(this.cards));
+	}
+
+	public RandomCart getCard() {
+		if (posicion == 51) {
+			System.out.println("No hay");
+			return null;
+		}
+		RandomCart temp = this.cards[posicion];
+		posicion++;
+		return temp;
+	}
+}

@@ -1,0 +1,43 @@
+package proyectoFinal;
+
+public class RandomCart {
+
+	private char Valor = 0;
+	private char tipo;
+
+	public char getValor() {
+		return Valor;
+	}
+
+	public void setValor(char valor) {
+		Valor = valor;
+	}
+
+	public char getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(char tipo) {
+		this.tipo = tipo;
+	}
+
+	public int getValue() {
+		if (this.Valor == 'T') {
+			return 10;
+		} else if (this.Valor == 'J') {
+			return 11;
+		} else if (this.Valor == 'Q') {
+			return 12;
+		} else if (this.Valor == 'K') {
+			return 13;
+		} else if (this.Valor == 'A') {
+			return 1;
+		} else {
+			return Integer.parseInt(this.Valor + "");
+		}
+	}
+
+	public String toString() {
+		return this.Valor + "" + this.tipo;
+	}
+}

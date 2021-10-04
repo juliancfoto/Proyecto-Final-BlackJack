@@ -1,0 +1,44 @@
+package proyectoFinal;
+
+import java.util.ArrayList;
+
+public class Mano {
+
+	ArrayList<RandomCart> arr = new ArrayList<RandomCart>();
+	int posicion = 0;
+
+	public void addCard(RandomCart c) {
+		arr.add(c);
+	}
+
+	public String toString() {
+		String mano = "";
+
+		for (int i = 0; i < arr.size(); i++) {
+			mano += arr.get(i).toString() + " ";
+		}
+
+		return mano;
+	}
+
+	public int getValue() {
+		int val = 0;
+		boolean ace = false;
+		for (int i = 0; i < arr.size(); i++) {
+			RandomCart temp = arr.get(i);
+			int CardValor = temp.getValue();
+			if (CardValor > 10) {
+				CardValor = 10;
+			}
+			if (CardValor == 1) {
+				ace = true;
+			}
+			val += CardValor;
+		}
+		if (ace == true && val + 10 <= 21) {
+			val = val + 10;
+		}
+		return val;
+	}
+
+}
