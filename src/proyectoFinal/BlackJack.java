@@ -13,8 +13,6 @@ import java.awt.Font;
 import java.awt.Panel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.InputMismatchException;
-
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -23,9 +21,9 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import java.awt.Toolkit;
-import java.awt.Window.Type;
 import javax.swing.JButton;
 
+@SuppressWarnings("serial")
 public class BlackJack extends JFrame {
 
 	private JPanel contentPane;
