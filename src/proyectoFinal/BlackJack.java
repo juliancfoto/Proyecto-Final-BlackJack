@@ -249,7 +249,7 @@ public class BlackJack extends JFrame {
 				// Sumamos los valores de cada carta.
 				valorC = barajaBJ.getValor(nRandom);
 				barajaBJ.setValor(valorC);
-				sumaJugador = cartasJugador.getValorTotal();
+				cartasJugador.sumaVal(valorC);
 
 				// Ponemos la opción de si el jugador saca un BlackJack y gana.
 				if (cartasJugador.getValorTotal() == 21) {
@@ -272,7 +272,9 @@ public class BlackJack extends JFrame {
 								"Introduzca el número 1 o el número 11" + e1.toString());
 						valorAS = Integer.parseInt(
 								(JOptionPane.showInputDialog("Sacaste un AS\n ¿Qué valor deseas asignarle?(1 ó 11)")));
+
 					}
+					cartasJugador.sumaVal(valorAS - 1);
 				}
 
 				// Creamos las opciones si es victoria del jugador o de la Banca.
@@ -328,6 +330,7 @@ public class BlackJack extends JFrame {
 				valorC = barajaBJ.getValor(nRandom);
 				valorC += barajaBJ.getValor(nRandom1);
 				barajaBJ.setValor(valorC);
+				cartasBanca.sumaValB(valorC);
 
 				// Declaramos un condicional para que la banca intente ganarle al jugador.
 				if (cartasBanca.getValorTotal() < cartasJugador.getValorTotal()) {
@@ -337,8 +340,7 @@ public class BlackJack extends JFrame {
 					lblCarta3.setVisible(true);
 					valorC = barajaBJ.getValor(nRandom);
 					barajaBJ.setValor(valorC);
-					System.out.println(
-							"El valor es: " + barajaBJ.getValor() + " Y la suma es: " + cartasBanca.sumaValB(valorC));
+					cartasBanca.sumaValB(valorC);
 
 					if (cartasBanca.getValorTotal() < cartasJugador.getValorTotal()) {
 						nRandom = (int) Math.floor(Math.random() * 51 + 1);
@@ -347,9 +349,8 @@ public class BlackJack extends JFrame {
 						lblCarta4.setVisible(true);
 						valorC = barajaBJ.getValor(nRandom);
 						barajaBJ.setValor(valorC);
+						cartasBanca.sumaValB(valorC);
 
-						System.out.println("El valor es: " + barajaBJ.getValor() + " Y la suma es: "
-								+ cartasBanca.sumaValB(valorC));
 					}
 				}
 
@@ -358,6 +359,7 @@ public class BlackJack extends JFrame {
 						|| (nRandom1 == 0 || nRandom1 == 13 || nRandom1 == 26 || nRandom1 == 39)) {
 					if (cartasBanca.getValorTotal() > 21) {
 						barajaBJ.setValor(valorC - 10);
+						cartasBanca.sumaValB(valorC);
 					}
 				}
 
