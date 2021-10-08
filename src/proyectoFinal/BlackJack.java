@@ -104,8 +104,7 @@ public class BlackJack extends JFrame {
 
 		// PANEL DE LAS CARTAS
 		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon(
-				"C:\\Users\\JULIAN\\.eclipse\\UNIVERSIDAD DISTRITAL\\Proyecto Final\\img\\Cartas\\Rojas\\corazon10.png"));
+		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\JULIAN\\.eclipse\\UNIVERSIDAD DISTRITAL\\Proyecto-Final-BlackJack\\img\\Cartas\\Negras\\pica12.png"));
 		lblNewLabel_1.setBounds(10, 22, 71, 97);
 		panelBanca.add(lblNewLabel_1);
 
