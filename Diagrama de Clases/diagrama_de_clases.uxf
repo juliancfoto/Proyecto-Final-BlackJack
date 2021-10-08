@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>294</x>
+      <y>42</y>
+      <w>276</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>proyectoFinal::BlackJack
+--
+-contentPane: JPanel
+~player = JOptionPane.showInputDialog("Ingrese su nombre: "): String
+~barajaBJ = new Baraja(): Baraja
+~cartasJugador = new ManoJugador(): ManoJugador
+~cartasBanca = new ManoBanco(): ManoBanco
+~contadorP = 0: int
+~contadorV = 0: int
+~contadorB = 0: int
+~sumaJugador: int
+~banderaN: boolean
+--
++BlackJack(): ctor
++main(String[] args): void
++componentes(): void
+--
+bg=red
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>366</x>
+      <y>396</y>
+      <w>126</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>proyectoFinal::Baraja
+--
+-baraja[]: String
+-valores[]: int
+--
++llenarBaraja(): void
++asigValor(): void
++asigValor(String b): void
++retornarRandom(int n): String
++getValor(int n): int
++getBaraja(): String[]
++setBaraja(String[] baraja): void
+--
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>156</x>
+      <y>426</y>
+      <w>138</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>proyectoFinal::ManoBanco
+--
+-valorTotalBanca: int
+--
++sumaValB(int valor): int
++getValorTotal(): int
++setValorTotal(int valorTotal): void
+--
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>576</x>
+      <y>426</y>
+      <w>138</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>proyectoFinal::ManoJugador
+--
+-valorTotal: int
+--
++sumaVal(int valor): int
++getValorTotal(): int
++setValorTotal(int valorTotal): void
+--
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>378</x>
+      <y>258</y>
+      <w>102</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>proyectoFinal::Carta
+--
+-valor: int
+--
++getValor(): int
++setValor(int valor): void
+--
+bg=yellow
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>216</x>
+      <y>318</y>
+      <w>174</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+
+
+0..1</panel_attributes>
+    <additional_attributes>270.0;10.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>318</y>
+      <w>36</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+m1=0..52
+m2=0..1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>474</x>
+      <y>318</y>
+      <w>180</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+
+
+0..1</panel_attributes>
+    <additional_attributes>10.0;10.0;280.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>516</x>
+      <y>480</y>
+      <w>42</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>Persona</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>486</x>
+      <y>450</y>
+      <w>102</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>Juega</panel_attributes>
+    <additional_attributes>10.0;20.0;150.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>108</x>
+      <y>414</y>
+      <w>60</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>SimpleClass</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>480</x>
+      <y>384</y>
+      <w>60</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>SimpleClass</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>702</x>
+      <y>414</y>
+      <w>60</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>SimpleClass</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>216</x>
+      <y>204</y>
+      <w>90</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;370.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>204</y>
+      <w>18</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>564</x>
+      <y>204</y>
+      <w>90</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>lt=-
+</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;370.0</additional_attributes>
+  </element>
+</diagram>
