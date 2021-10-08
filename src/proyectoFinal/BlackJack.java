@@ -12,8 +12,8 @@ import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.Panel;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;<<<<<<<HEAD=======
-import java.util.InputMismatchException;>>>>>>>952f cd47c2546cc66bb272801974d4631bb3a06e
+import java.awt.event.ActionListener;
+import java.util.InputMismatchException;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -23,19 +23,12 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import java.awt.Toolkit;
-import java.awt.Window.Type;<<<<<<<HEAD=======
+import java.awt.Window.Type;
 import javax.swing.JButton;
 
 public class BlackJack extends JFrame {
 
 	private JPanel contentPane;
-
-	// Nombre del jugador
-	String player = JOptionPane.showInputDialog("Ingrese su nombre: ");
-
-	/**
-	 * Launch the application.
-	 */
 
 	// Nombre del jugador
 	String player = JOptionPane.showInputDialog("Ingrese su nombre: ");
@@ -68,10 +61,6 @@ public class BlackJack extends JFrame {
 		});
 	}
 
-	/**
-	 * <<<<<<< HEAD Create the frame. ======= Creamos la ventana. >>>>>>>
-	 * 952fcd47c2546cc66bb272801974d4631bb3a06e
-	 */
 	/**
 	 * Creamos la ventana.
 	 */
